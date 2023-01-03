@@ -1,0 +1,204 @@
+@font-face {
+	font-family: "Myfuente-Regula";
+	src: url("fonts/Myfuente-Regular.svg") format("svg"),url("fonts/Myfuente-Regular.woff") format("woff"), url("fonts/Myfuente-Regular.woff2") format("woff2"); 
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root{
+    --ancho-dTres: 80px;
+    --color-d: #a2d8a5;
+    --color-tres: #4c4b4d;
+}
+
+.prueba{
+    --ancho-dTres: 40px;
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.MyF{
+	font-family: "Myfuente-Regula";
+}
+
+.menu, .cont_menu, .redes, .cont_menu ul {
+    display: flex;
+}
+
+.menu {
+    justify-content: space-between;
+}
+
+.class {
+    justify-content: center;
+}
+
+.menu, .cont_menu {
+    align-items: center;
+}
+
+.menu, .cont_menu ul li a, .cont_dTres *, .cont_dTres, .dTres_txt, .redes a {
+   transition: all 0.6s ease-in-out;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+main{
+    margin-top: 134px;
+    height: 1000px;
+}
+/* ----------------------------- */
+
+.cont_dTres {
+    cursor: pointer;
+    width: var(--ancho-dTres);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: #eee; */
+}
+
+.dTres {
+    width: var(--ancho-dTres);
+    height: var(--ancho-dTres);
+    border-radius: 29%;
+    box-shadow: 0 0 0 1px var(--color-tres) inset;
+}
+
+.prueba .dTres {
+    box-shadow: 0 0 0 1px #ffffff inset;
+}
+
+.cont_dTres:hover .dTres {
+    box-shadow: 0 0 0 1px var(--color-d) inset;
+}
+
+.cont_dTres:hover path.bodeB, .cont_dTres:hover path.bodeBg, .cont_dTres:hover g#txt path, .cont_dTres:hover g#bgd path {
+    fill: var(--color-d);
+}
+
+.cont_dTres:hover path.deBg, path.bodeBg {
+    fill: transparent;
+}
+
+.cont_dTres:hover path.deB, .cont_dTres:hover g#tres path, .prueba path.bodeB, .prueba #tres path {
+    fill: #ffffff;
+}
+
+.dTres_txt {
+    /* width: 51.552px; */
+    width: 65%;
+    height: 19px;
+    height: 0;
+    /* margin-top: 6.827px; */
+    /* margin-top: 9%; */
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.prueba .dTres_txt {
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* D */
+path.deBg, path.deB, g#bgd path{
+    fill: var(--color-d);
+}
+/* FIN D */
+
+/* TRES */
+#tres path, path.bodeB, g#txt path{
+    fill: var(--color-tres);
+}
+/* FIN TRES */
+/* ------------------------ */
+
+nav.menu {
+    padding: 27px 43px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav.prueba{
+    background: var(--color-tres);
+    padding: 10px 43px;
+}
+
+.cont_menu ul li a{
+    margin: 0 25px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    color: #252222;
+}
+
+nav.prueba .cont_menu ul li a, .prueba .redes a{
+    color: #ffffff;
+}
+
+.cont_menu ul li:first-child a{
+    margin-left: 0;
+}
+
+.cont_menu ul li:last-child a{
+    margin-right: 0;
+}
+
+.cont_line{
+    position: absolute;
+    width: 100%;
+    background: #eee;
+    height: 100%;
+    z-index: -1;
+}
+
+.linea_menu {
+    height: 1px;
+    width: 20px;
+    background: var(--color-d);
+    position: absolute;
+    opacity: 1;
+    transition: width 0.6s ease-in-out, opacity 0.2s, left 0.6s ease-in-out, opacity 0.2s;
+    /* transition: left 0.6s ease-in-out, opacity 0.2s; */
+}
+
+.op {
+    opacity: 0;
+}
+
+nav.menu .cont_menu ul li a.active{
+    color: var(--color-d);
+}
+
+.redes {
+    margin-left: 32px;
+}
+
+.redes a {
+    color: #252222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-left: 15px;
+    font-size: 15px;
+}
